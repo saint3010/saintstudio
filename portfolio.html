@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Saint Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Saint Studio logo" class="saintlogo">
+        <span class="brand-text">
+          <span class="brand-name">Saint</span>
+          <span class="brand-studio">Studio</span>
+        </span>
+      </a>
+
+      <button id="nav-toggle" aria-label="Toggle navigation" class="nav-toggle">☰</button>
+
+      <nav class="nav" id="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="portfolio-hero">
+      <div class="container">
+        <h1>Portfolio</h1>
+        <p class="lead">A showcase of my real design projects — from logos to mockups and flyers.</p>
+      </div>
+    </section>
+
+    <section class="portfolio-filters">
+      <div class="container">
+        <button class="filter-btn active" data-filter="all" aria-label="Show all portfolio items">All</button>
+        <button class="filter-btn" data-filter="logo" aria-label="Show logo portfolio items">Logos</button>
+        <button class="filter-btn" data-filter="flyer" aria-label="Show flyer portfolio items">Flyers</button>
+        <button class="filter-btn" data-filter="mockup" aria-label="Show mockup portfolio items">Mockups</button>
+      </div>
+    </section>
+
+    <section class="portfolio-gallery">
+      <div class="container grid">
+
+        <figure class="card logo">
+          <img src="images/niletechlogo.png" alt="Nile Tech Logo" class="project-logo">
+          <figcaption>Nile Tech Logo</figcaption>
+        </figure>
+
+        <figure class="card logo">
+          <img src="images/junologo.png" alt="Juno Cafe Logo" class="project-logo">
+          <figcaption>Juno Cafe Logo</figcaption>
+        </figure>
+
+        <figure class="card logo">
+          <img src="images/zaharalogo.png" alt="Zahara Logo" class="project-logo">
+          <figcaption>Zahara Logo</figcaption>
+        </figure>
+
+        <figure class="card logo">
+          <img src="images/morilogo.jpg" alt="mori's logo" class="project-logo">
+          <figcaption>Mori’s Kitchen Logo</figcaption>
+        </figure>
+
+        <figure class="card flyer">
+          <img src="images/moriadvflyer.png" alt="Mori's Kitchen Advert Flyer">
+          <figcaption>Mori’s Kitchen Advert Flyer</figcaption>
+        </figure>
+
+        <figure class="card flyer">
+          <img src="images/morisplan.png" alt="Mori’s Kitchen Meal Plan">
+          <figcaption>Mori’s Kitchen Weekly Meal Plan</figcaption>
+        </figure>
+
+        <figure class="card flyer">
+          <img src="images/rukky.png" alt="Rukky Baby Flyer">
+          <figcaption>Rukky Baby Flyer</figcaption>
+        </figure>
+
+        <figure class="card mockup">
+          <img src="images/halalmockup.png" alt="Halal Logo Mockup">
+          <figcaption>Halal Mockup</figcaption>
+        </figure>
+
+        <figure class="card mockup">
+          <img src="images/junologomockup.png" alt="Juno Logo Mockup">
+          <figcaption>Juno Mockup</figcaption>
+        </figure>
+
+        <figure class="card mockup">
+          <img src="images/zahara2.png" alt="Zahara Mockup Card">
+          <figcaption>Zahara Mockup 1</figcaption>
+        </figure>
+
+        <figure class="card mockup">
+          <img src="images/zahara1.png" alt="Zahara Packaging Mockup">
+          <figcaption>Zahara Mockup 2</figcaption>
+        </figure>
+
+        <figure class="card mockup">
+          <img src="images/niletechmockup.png" alt="Nile Tech Mockup">
+          <figcaption>Nile Tech Mockup</figcaption>
+        </figure>
+
+        <figure class="card mockup">
+          <img src="images/mockup.png" alt="mockup">
+          <figcaption>Generic Mockup 1</figcaption>
+        </figure>
+
+        <figure class="card mockup">
+          <img src="images/mockup1.png" alt="mockup">
+          <figcaption>Generic Mockup 2</figcaption>
+        </figure>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <img src="images/logo.png" alt="Saint Studio logo" class="logo-sm">
+        <div>
+          <strong>Saint Studio</strong><br>
+          Quadri Abolarinwa Akintunde
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <a href="mailto:officialsaintstudio@gmail.com">officialsaintstudio@gmail.com</a><br>
+        <a href="https://instagram.com/saintstudio.design" target="_blank">@saintstudio.design</a><br>
+        <a href="https://wa.link/0617d0" target="_blank">Whatsapp</a>
+      </div>
+
+      <div class="footer-right">
+        <small>© <span id="year"></span> Saint Studio — All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('nav');
+    navToggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        cards.forEach(card => {
+          if (filter === 'all' || card.classList.contains(filter)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
